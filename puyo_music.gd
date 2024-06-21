@@ -1,5 +1,7 @@
 extends AudioStreamPlayer
 
+#test comment
+
 var intensity = 0 #can be 0, 1, or 2. Adds or removes a preset amount of stems
 var lead #Changes whether the Cirana or Chubbo leads are active. 0 = Neither, 1 = Cirana, 2 = Chubbo, 3 = Both
 var chords #Changes whether the Cirana or Chubbo chords are active. 0 = Neither, 1 = Cirana, 2 = Chubbo, 3 = Both
