@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dfa4ql5krr2xg"
+path="res://.godot/imported/Closed Hat.ogg-9916fd1e851bccb450515ec0e29303d5.oggvorbisstr"
+
+[deps]
+
+source_file="res://Closed Hat.ogg"
+dest_files=["res://.godot/imported/Closed Hat.ogg-9916fd1e851bccb450515ec0e29303d5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

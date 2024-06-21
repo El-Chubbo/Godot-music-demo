@@ -1,0 +1,121 @@
+[gd_scene load_steps=18 format=3 uid="uid://budx5fr7eyc64"]
+
+[ext_resource type="AudioStream" uid="uid://na0c8y0dw1ck" path="res://Intro.ogg" id="1_0uly6"]
+[ext_resource type="AudioStream" uid="uid://b3amxc48ftqhv" path="res://Intro Loop.ogg" id="2_k8li3"]
+[ext_resource type="AudioStream" uid="uid://s7hjampdwqya" path="res://Intro End.ogg" id="3_7m6fr"]
+[ext_resource type="AudioStream" uid="uid://b5ohxi6gtj3l5" path="res://Bass Start.ogg" id="4_jprhv"]
+[ext_resource type="AudioStream" uid="uid://bgicgkxhn2865" path="res://Drumkit 1.ogg" id="5_7u0xk"]
+[ext_resource type="AudioStream" uid="uid://dujnsvrs68ar3" path="res://Pluck Bass 1.ogg" id="6_tksyk"]
+[ext_resource type="AudioStream" uid="uid://b14cm0ajw6xht" path="res://Hi Hat.ogg" id="7_ie0yl"]
+[ext_resource type="AudioStream" uid="uid://bmm4ohan53a6p" path="res://Cirana Verse 1.ogg" id="8_kxc3c"]
+[ext_resource type="AudioStream" uid="uid://borojdg8cgb3g" path="res://Organ Chords.ogg" id="8_xqoe6"]
+[ext_resource type="AudioStream" uid="uid://drpxl8j0lnmn0" path="res://Bass Combined.ogg" id="9_k0k6a"]
+[ext_resource type="AudioStream" uid="uid://jbk8k4a2chfu" path="res://Rhythm Guitar.ogg" id="10_tfgi1"]
+[ext_resource type="Script" path="res://puyo_music.gd" id="11_i8yik"]
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_kyqgx"]
+stream_count = 4
+stream_0/stream = ExtResource("4_jprhv")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("5_7u0xk")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("6_tksyk")
+stream_2/volume = 0.0
+stream_3/stream = ExtResource("7_ie0yl")
+stream_3/volume = 0.0
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_b27ix"]
+stream_count = 3
+stream_0/stream = ExtResource("8_kxc3c")
+stream_0/volume = 0.0
+stream_1/volume = 0.0
+stream_2/volume = 0.0
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_lwq6q"]
+stream_count = 2
+stream_0/stream = ExtResource("8_kxc3c")
+stream_0/volume = 0.0
+stream_1/stream = SubResource("AudioStreamSynchronized_b27ix")
+stream_1/volume = 0.0
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_he5sb"]
+stream_count = 6
+stream_0/stream = ExtResource("5_7u0xk")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("7_ie0yl")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("8_xqoe6")
+stream_2/volume = 0.0
+stream_3/stream = ExtResource("6_tksyk")
+stream_3/volume = 0.0
+stream_4/stream = ExtResource("9_k0k6a")
+stream_4/volume = 0.0
+stream_5/stream = ExtResource("10_tfgi1")
+stream_5/volume = 0.0
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_g6whi"]
+clip_count = 8
+clip_0/name = &"Intro"
+clip_0/stream = ExtResource("1_0uly6")
+clip_0/auto_advance = 1
+clip_0/next_clip = 1
+clip_1/name = &"Intro Loop"
+clip_1/stream = ExtResource("2_k8li3")
+clip_1/auto_advance = 0
+clip_2/name = &"Intro End"
+clip_2/stream = ExtResource("3_7m6fr")
+clip_2/auto_advance = 1
+clip_2/next_clip = 3
+clip_3/name = &"Intro 2"
+clip_3/stream = SubResource("AudioStreamSynchronized_kyqgx")
+clip_3/auto_advance = 0
+clip_4/name = &"Verse 1"
+clip_4/stream = SubResource("AudioStreamSynchronized_lwq6q")
+clip_4/auto_advance = 0
+clip_5/name = &"Intermission"
+clip_5/stream = SubResource("AudioStreamSynchronized_he5sb")
+clip_5/auto_advance = 0
+clip_6/name = &"Verse 2"
+clip_6/auto_advance = 0
+clip_7/name = &"Verse 3"
+clip_7/auto_advance = 0
+_transitions = {
+Vector2i(0, 1): {
+"fade_beats": 1,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 1
+},
+Vector2i(1, 1): {
+"fade_beats": 1,
+"fade_mode": 4,
+"from_time": 1,
+"hold_previous": true,
+"to_time": 1
+},
+Vector2i(1, 2): {
+"fade_beats": 1,
+"fade_mode": 0,
+"from_time": 3,
+"to_time": 1
+},
+Vector2i(2, 3): {
+"fade_beats": 1,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 0
+}
+}
+
+[node name="Master" type="Node2D"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = 17.0
+offset_top = 11.0
+offset_right = 1142.0
+offset_bottom = 639.0
+
+[node name="PuyoMusic" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamInteractive_g6whi")
+volume_db = -9.905
+script = ExtResource("11_i8yik")

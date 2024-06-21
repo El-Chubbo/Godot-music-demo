@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://hj4ndbkdu23t"
+path="res://.godot/imported/Chubbo Verse 2.ogg-d53cd0a3b821987e89bbd8b40bf26935.oggvorbisstr"
+
+[deps]
+
+source_file="res://Chubbo Verse 2.ogg"
+dest_files=["res://.godot/imported/Chubbo Verse 2.ogg-d53cd0a3b821987e89bbd8b40bf26935.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

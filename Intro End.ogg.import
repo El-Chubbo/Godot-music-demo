@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://s7hjampdwqya"
+path="res://.godot/imported/Intro End.ogg-91678251d937caf31dedd810db51374c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Intro End.ogg"
+dest_files=["res://.godot/imported/Intro End.ogg-91678251d937caf31dedd810db51374c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

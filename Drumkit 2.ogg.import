@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://blo383qyvunry"
+path="res://.godot/imported/Drumkit 2.ogg-c4877c422f99cf8e70808738c99699dc.oggvorbisstr"
+
+[deps]
+
+source_file="res://Drumkit 2.ogg"
+dest_files=["res://.godot/imported/Drumkit 2.ogg-c4877c422f99cf8e70808738c99699dc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
