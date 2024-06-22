@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://budx5fr7eyc64"]
+[gd_scene load_steps=19 format=3 uid="uid://budx5fr7eyc64"]
 
 [ext_resource type="AudioStream" uid="uid://na0c8y0dw1ck" path="res://Intro.ogg" id="1_0uly6"]
 [ext_resource type="AudioStream" uid="uid://b3amxc48ftqhv" path="res://Intro Loop.ogg" id="2_k8li3"]
@@ -107,6 +107,8 @@ Vector2i(2, 3): {
 }
 }
 
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_v2vvb"]
+
 [node name="Master" type="Node2D"]
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
@@ -119,3 +121,6 @@ offset_bottom = 639.0
 stream = SubResource("AudioStreamInteractive_g6whi")
 volume_db = -9.905
 script = ExtResource("11_i8yik")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamInteractive_v2vvb")
